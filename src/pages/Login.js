@@ -24,7 +24,7 @@ function LoginResponsive(props) {
 
       console.log("🚀 ~ userData:", userData);
 
-      const response = await axios.post("https://user-login-server-ymh2.onrender.com//users/login", userData);
+      const response = await axios.post("https://user-login-server-ymh2.onrender.com/users/login", userData);
       console.log("🚀 ~ response:", response);
 
       if (response.data.success === false) {
