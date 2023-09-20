@@ -8,7 +8,7 @@ export default function EmailConfirm(props) {
 
   useEffect(() => {
     async function sendData() {
-      const response = await axios.post("/users/emailconfirm", { token });
+      const response = await axios.post("https://user-login-server-ymh2.onrender.com//users/emailconfirm", { token });
       console.log("🚀 ~ reponse:", response);
 
       if (response.data.success) {

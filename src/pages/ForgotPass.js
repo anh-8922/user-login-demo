@@ -10,7 +10,7 @@ function ForgotPass(props) {
   const handleSubmit = async () => {
     if (!usernameOrEmail) return;
 
-    const response = await axios.post("/users/forgotpass", { usernameOrEmail });
+    const response = await axios.post("https://user-login-server-ymh2.onrender.com//users/forgotpass", { usernameOrEmail });
     console.log("🚀 ~ response:", response);
 
     if (response.data.success)

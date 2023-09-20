@@ -47,7 +47,7 @@ export default function Profile() {
       console.log(pair[0] + ": " + pair[1]);
     }
 
-    const response = await axios.put("/users/updateprofile", formdata, {
+    const response = await axios.put("https://user-login-server-ymh2.onrender.com//users/updateprofile", formdata, {
       Headers: {
         "Content-type": "multipart/form-data; charset=UTF-8",
       },
@@ -69,7 +69,7 @@ export default function Profile() {
   console.log("🚀 ~ state:", state);
 
   const handleLogout = async () => {
-    const response = await axios.post("/users/logout");
+    const response = await axios.post("https://user-login-server-ymh2.onrender.com//users/logout");
     console.log("🚀 ~ response:", response.data);
 
     dispatch({ type: "LOGOUT" });

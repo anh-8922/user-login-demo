@@ -13,7 +13,7 @@ function ChangePass(props) {
     if (!pass.newPass || pass.newPass !== pass.retyped)
       return alert("Pass don't match");
 
-    const response = await axios.post("/users/changepass", {
+    const response = await axios.post("https://user-login-server-ymh2.onrender.com//users/changepass", {
       token,
       password: pass.newPass,
     });
